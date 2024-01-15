@@ -1,0 +1,48 @@
+**Steps to perform the copy activity:
+Pre-requisites:
+Data set- lesson no. 8 - Coursedata.csv
+Source: datalake1
+Container- inputraw
+Destination : Datalake1
+Container- outputraw
+*Azure data factory is ready - Service
+
+Step1: From Home button, Click on ingest.
+You will be able to see copy data tool.
+
+Step2: Since, we are performing one time copy task, please proceed with Task for runonce now.
+
+Step 3 : Click Next,
+Source Type: Azure datalake Gen2.
+Name: Inputrawdatalake
+Connect via Integration runtime: Azure or AutoresolveRuntime.
+Authentication type: Account key.
+Azure subscription: Free Tier or your own sub
+Storage acc: This where you will store source data.
+
+After all the steps completed, Test connection, click Create.
+In file or folder option: Browse the place where you stored the file in datalake.
+Option:
+Un check recursively.
+For no more changes, click Next.
+
+Step4: No changes required in file format settings.
+Just click preview the data and proceed further.
+
+Step5: Destination
+Select the correct destination connection as datalake :
+NSource Type: Azure datalake Gen2.
+Name: outputrawdatalake
+Connect via Integration runtime: Azure or AutoresolveRuntime.
+Authentication type: Account key.
+Azure subscription: Free Tier or your own sub
+Storage acc: This where you will store source data.
+After all the steps completed, Test connection, click Create.
+In file or folder option: Browse the place where you want to copy the file 
+
+step 6: No changes in file configuration, click next to final executon of your pipeline.
+ 
+Step7: validate the file and results whether it is received in your output or not.
+
+
+
